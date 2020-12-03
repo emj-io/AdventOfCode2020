@@ -1,4 +1,8 @@
-const args = process.argv.slice(2);
-const day = require(`./day${args[0]}.js`)
+const days = require("./days");
 
-console.log(day.run());
+
+const fs = require('fs');
+
+let day01RawData = fs.readFileSync('./src/day01_data.json');
+let day01Data = JSON.parse(day01RawData);
+console.log(`day01: ${days.day01(day01Data["entries"], day01Data["targetSum"])}`);

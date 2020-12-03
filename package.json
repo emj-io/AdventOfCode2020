@@ -6,11 +6,12 @@
   "author": "Eric M. Johnson <ejohnson.pub@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "jest": "^26.6.3",
     "prettier": "^2.2.1"
   },
   "scripts": {
-    "day": "node src/index.js",
-    "watchday": "watch 'yarn run day 01'"
+    "main": "node src/index.js",
+    "test": "jest"
   },
   "dependencies": {
     "watch": "^1.0.2"
